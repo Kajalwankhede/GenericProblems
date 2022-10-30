@@ -19,8 +19,14 @@ public class FindMaximumUsingGeneric{
         System.out.printf("Maximum Integers of %d, %d and %d \nNumber is: %d\n\n",
                 8, 4, 10, maximum( 8, 4, 10 ));
 
-        System.out.printf("Maximum Float Number of %.1f,%.1f and %.1f \nFloat Number is: %.1f\n\n",
+        System.out.printf("Maximum Float Number of %.1f,%.1f and %.1f \nFloat Number At First Position: %.1f\n\n",
                 8.8, 1.1, 2.2, maximum(   8.8,1.1, 2.2));
+        System.out.printf("Maximum Float Number of %.1f,%.1f and %.1f \nFloat Number At Second Position %.1f\n\n",
+                8.8, 9.9, 2.2, maximum(   8.8,9.9, 2.2));
+
+        System.out.printf("Maximum Float Number of %.1f,%.1f and %.1f \nFloat Number At Third Position: %.1f\n\n",
+                7.7, 6.6, 9.9, maximum(    7.7, 6.6, 9.9));
+
 
     }
 }
