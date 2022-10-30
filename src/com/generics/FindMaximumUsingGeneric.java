@@ -22,6 +22,7 @@ public class FindMaximumUsingGeneric <T extends Comparable<T>>{
         if(c.compareTo(max) > 0) {
             max = c;
         }
+        printMax(a,b,c,max);
         return max;
     }
     public static String testMaximum(String a, String b,String c) {
@@ -34,35 +35,25 @@ public class FindMaximumUsingGeneric <T extends Comparable<T>>{
         if (c.compareTo(max) > 0) {
             max = c;
         }
+        printMax(a,b,c,max);
         return max;
+    }
+
+    public static <T> void printMax(T a, T b, T c, T max){
+
+        System.out.printf("Maximum of %s, %s and %s is:  %s\n",a,b,c,max);
     }
 
     public static void main(String args[]) {
         System.out.println("\nGenerics To test Maximum of 3 Variables.");
-         System.out.printf("Maximum Integers of %d, %d and %d \nInteger Number At First Position :%d\n\n",
-                  8, 4, 1, maximum( 8, 4, 1 ));
-        System.out.printf("Maximum Integers of %d, %d and %d \nInteger Number At Second Position : %d\n\n",
-                8, 9, 1, maximum( 8, 9, 1 ));
-        System.out.printf("Maximum Integers of %d, %d and %d \nInteger Number At Third Position : %d\n\n",
-                8, 4, 10, maximum( 8, 4, 10 ));
+        Integer aInt=3, bInt=4, cInt=5;
+        Float aF1=6.6f,bF1=8.8f,cF1=7.7f;
+        String aStr="pear",bStr="apple",cStr="Orange";
 
-        System.out.printf("Maximum Float Number of %.1f,%.1f and %.1f \nFloat Number At First Position: %.1f\n\n",
-          8.8, 1.1, 2.2, maximum(   8.8,1.1, 2.2));
-
-          System.out.printf("Maximum Float Number of %.1f,%.1f and %.1f \nFloat Number At Second Position %.1f\n\n",
-         8.8, 9.9, 2.2, maximum(   8.8,9.9, 2.2));
-
-           System.out.printf("Maximum Float Number of %.1f,%.1f and %.1f \nFloat Number At Third Position: %.1f\n\n",
-               7.7, 6.6, 9.9, maximum(    7.7, 6.6, 9.9));
-
-          System.out.printf("Maximum String of %s, %s and %s\nString At First Position: %s\n","Peach",
-            "Apple", "Banana", maximum("Peach", "Apple", "Banana"));
-
-           System.out.printf("Maximum String of %s, %s and %s\nString At Second Position: %s\n","Apple",
-            "Peach", "Banana", maximum("Apple", "Peach", "Banana"));
-
-              System.out.printf("Maximum String of %s, %s and %s\nString At Third Position: %s\n","Apple",
-                "Banana", "Peach", maximum("Apple", "Banana", "Peach"));
+        FindMaximumUsingGeneric.testMaximum(aStr,bStr,cStr);
+        new FindMaximumUsingGeneric(aInt,bInt,cInt).maximum();
+        new FindMaximumUsingGeneric(aF1,bF1,cF1).maximum();
+        new FindMaximumUsingGeneric(aStr,bStr,cStr).maximum();
 
 
     }
