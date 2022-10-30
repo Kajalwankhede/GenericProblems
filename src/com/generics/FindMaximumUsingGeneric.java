@@ -1,7 +1,7 @@
 package com.generics;
-
 public class FindMaximumUsingGeneric{
-    public static <T extends Comparable<T>> T maximum(T a, T b, T c) {
+    public static <T extends Comparable<T>> T maximum(T a, T b, T c) // shows the largest of 3 comaptible objects
+    {
         T max = a;   // assume x is initially the largest
 
         if(b.compareTo(max) > 0) {
