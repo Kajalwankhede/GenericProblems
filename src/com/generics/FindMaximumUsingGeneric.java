@@ -20,7 +20,7 @@ public class FindMaximumUsingGeneric{
                 8, 4, 10, maximum( 8, 4, 10 ));
 
         System.out.printf("Maximum Float Number of %.1f,%.1f and %.1f \nFloat Number is: %.1f\n\n",
-                8.8, 1.1, 2.2, maximum(   8.8,1.1, 2.2));
+                8.8, 9.9, 2.2, maximum(   8.8,9.9, 2.2));
 
     }
 }
